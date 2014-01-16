@@ -10,4 +10,6 @@
 
 @interface SDViewController : UIViewController
 
+@property (nonatomic, assign) BOOL hasValidated;
+
 @end

@@ -21,6 +21,12 @@
 		CE896811188641EA000A5663 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8967F3188641EA000A5663 /* UIKit.framework */; };
 		CE896819188641EA000A5663 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE896817188641EA000A5663 /* InfoPlist.strings */; };
 		CE89681B188641EA000A5663 /* SecuryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE89681A188641EA000A5663 /* SecuryDemoTests.m */; };
+		CE89682718864220000A5663 /* SDSecuryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE89682618864220000A5663 /* SDSecuryManager.m */; };
+		CE89682C188643F9000A5663 /* SDKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE89682B188643F9000A5663 /* SDKeychainWrapper.m */; };
+		CE896833188661C8000A5663 /* NSString+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE896832188661C8000A5663 /* NSString+md5.m */; };
+		CE89683518867F6E000A5663 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE89683418867F6E000A5663 /* Security.framework */; };
+		CE89683718867F91000A5663 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE89683618867F91000A5663 /* SystemConfiguration.framework */; };
+		CEB758FD1887B5FB00F07D28 /* SDAppKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB758FC1887B5FB00F07D28 /* SDAppKeychain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,17 @@
 		CE896816188641EA000A5663 /* SecuryDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecuryDemoTests-Info.plist"; sourceTree = "<group>"; };
 		CE896818188641EA000A5663 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE89681A188641EA000A5663 /* SecuryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecuryDemoTests.m; sourceTree = "<group>"; };
+		CE89682518864220000A5663 /* SDSecuryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSecuryManager.h; sourceTree = "<group>"; };
+		CE89682618864220000A5663 /* SDSecuryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSecuryManager.m; sourceTree = "<group>"; };
+		CE89682A188643F9000A5663 /* SDKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKeychainWrapper.h; sourceTree = "<group>"; };
+		CE89682B188643F9000A5663 /* SDKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKeychainWrapper.m; sourceTree = "<group>"; };
+		CE896831188661C8000A5663 /* NSString+md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+md5.h"; sourceTree = "<group>"; };
+		CE896832188661C8000A5663 /* NSString+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+md5.m"; sourceTree = "<group>"; };
+		CE89683418867F6E000A5663 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CE89683618867F91000A5663 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE8968381886999A000A5663 /* SDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDConstants.h; sourceTree = "<group>"; };
+		CEB758FB1887B5FB00F07D28 /* SDAppKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAppKeychain.h; sourceTree = "<group>"; };
+		CEB758FC1887B5FB00F07D28 /* SDAppKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAppKeychain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE89683718867F91000A5663 /* SystemConfiguration.framework in Frameworks */,
+				CE89683518867F6E000A5663 /* Security.framework in Frameworks */,
 				CE8967F2188641EA000A5663 /* CoreGraphics.framework in Frameworks */,
 				CE8967F4188641EA000A5663 /* UIKit.framework in Frameworks */,
 				CE8967F0188641EA000A5663 /* Foundation.framework in Frameworks */,
@@ -101,6 +120,8 @@
 		CE8967EE188641EA000A5663 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE89683618867F91000A5663 /* SystemConfiguration.framework */,
+				CE89683418867F6E000A5663 /* Security.framework */,
 				CE8967EF188641EA000A5663 /* Foundation.framework */,
 				CE8967F1188641EA000A5663 /* CoreGraphics.framework */,
 				CE8967F3188641EA000A5663 /* UIKit.framework */,
@@ -112,6 +133,10 @@
 		CE8967F5188641EA000A5663 /* SecuryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CE89682D18866190000A5663 /* CustomCocoas */,
+				CE8968291886426F000A5663 /* Resources */,
+				CE89682818864263000A5663 /* Libraries */,
+				CE89682418864209000A5663 /* core */,
 				CE8967FE188641EA000A5663 /* SDAppDelegate.h */,
 				CE8967FF188641EA000A5663 /* SDAppDelegate.m */,
 				CE896801188641EA000A5663 /* Main.storyboard */,
@@ -119,6 +144,7 @@
 				CE896805188641EA000A5663 /* SDViewController.m */,
 				CE896807188641EA000A5663 /* Images.xcassets */,
 				CE8967F6188641EA000A5663 /* Supporting Files */,
+				CE8968381886999A000A5663 /* SDConstants.h */,
 			);
 			path = SecuryDemo;
 			sourceTree = "<group>";
@@ -150,6 +176,42 @@
 				CE896817188641EA000A5663 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE89682418864209000A5663 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CE89682518864220000A5663 /* SDSecuryManager.h */,
+				CE89682618864220000A5663 /* SDSecuryManager.m */,
+				CE89682A188643F9000A5663 /* SDKeychainWrapper.h */,
+				CE89682B188643F9000A5663 /* SDKeychainWrapper.m */,
+				CEB758FB1887B5FB00F07D28 /* SDAppKeychain.h */,
+				CEB758FC1887B5FB00F07D28 /* SDAppKeychain.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		CE89682818864263000A5663 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CE8968291886426F000A5663 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE89682D18866190000A5663 /* CustomCocoas */ = {
+			isa = PBXGroup;
+			children = (
+				CE896831188661C8000A5663 /* NSString+md5.h */,
+				CE896832188661C8000A5663 /* NSString+md5.m */,
+			);
+			path = CustomCocoas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE896833188661C8000A5663 /* NSString+md5.m in Sources */,
 				CE8967FC188641EA000A5663 /* main.m in Sources */,
+				CE89682718864220000A5663 /* SDSecuryManager.m in Sources */,
+				CE89682C188643F9000A5663 /* SDKeychainWrapper.m in Sources */,
+				CEB758FD1887B5FB00F07D28 /* SDAppKeychain.m in Sources */,
 				CE896806188641EA000A5663 /* SDViewController.m in Sources */,
 				CE896800188641EA000A5663 /* SDAppDelegate.m in Sources */,
 			);
@@ -377,11 +443,13 @@
 		CE89681F188641EA000A5663 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecuryDemo/SecuryDemo-Prefix.pch";
 				INFOPLIST_FILE = "SecuryDemo/SecuryDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,11 +458,13 @@
 		CE896820188641EA000A5663 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecuryDemo/SecuryDemo-Prefix.pch";
 				INFOPLIST_FILE = "SecuryDemo/SecuryDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +531,7 @@
 				CE896820188641EA000A5663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE896821188641EA000A5663 /* Build configuration list for PBXNativeTarget "SecuryDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +540,7 @@
 				CE896823188641EA000A5663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
