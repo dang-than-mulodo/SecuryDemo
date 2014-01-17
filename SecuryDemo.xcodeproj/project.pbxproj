@@ -26,7 +26,14 @@
 		CE896833188661C8000A5663 /* NSString+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE896832188661C8000A5663 /* NSString+md5.m */; };
 		CE89683518867F6E000A5663 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE89683418867F6E000A5663 /* Security.framework */; };
 		CE89683718867F91000A5663 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE89683618867F91000A5663 /* SystemConfiguration.framework */; };
+		CEB588D51888D83A007919F3 /* SDListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB588D41888D83A007919F3 /* SDListTableViewCell.m */; };
+		CEB588D81888EE04007919F3 /* SDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB588D71888EE04007919F3 /* SDDetailViewController.m */; };
+		CEB588DA188902A7007919F3 /* boom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB588D9188902A7007919F3 /* boom.jpg */; };
 		CEB758FD1887B5FB00F07D28 /* SDAppKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB758FC1887B5FB00F07D28 /* SDAppKeychain.m */; };
+		CEB759001887D9B700F07D28 /* SDItemStored.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB758FF1887D9B700F07D28 /* SDItemStored.m */; };
+		CEB759021887E9DC00F07D28 /* funny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB759011887E9DC00F07D28 /* funny.jpg */; };
+		CEB7590D1887F36500F07D28 /* SDListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB7590C1887F36500F07D28 /* SDListTableViewController.m */; };
+		CEB759101887F37300F07D28 /* SDAddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB7590F1887F37300F07D28 /* SDAddTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +75,20 @@
 		CE89683418867F6E000A5663 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CE89683618867F91000A5663 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE8968381886999A000A5663 /* SDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDConstants.h; sourceTree = "<group>"; };
+		CEB588D31888D83A007919F3 /* SDListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDListTableViewCell.h; sourceTree = "<group>"; };
+		CEB588D41888D83A007919F3 /* SDListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDListTableViewCell.m; sourceTree = "<group>"; };
+		CEB588D61888EE04007919F3 /* SDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDetailViewController.h; sourceTree = "<group>"; };
+		CEB588D71888EE04007919F3 /* SDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDetailViewController.m; sourceTree = "<group>"; };
+		CEB588D9188902A7007919F3 /* boom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boom.jpg; sourceTree = "<group>"; };
 		CEB758FB1887B5FB00F07D28 /* SDAppKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAppKeychain.h; sourceTree = "<group>"; };
 		CEB758FC1887B5FB00F07D28 /* SDAppKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAppKeychain.m; sourceTree = "<group>"; };
+		CEB758FE1887D9B700F07D28 /* SDItemStored.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDItemStored.h; sourceTree = "<group>"; };
+		CEB758FF1887D9B700F07D28 /* SDItemStored.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDItemStored.m; sourceTree = "<group>"; };
+		CEB759011887E9DC00F07D28 /* funny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = funny.jpg; sourceTree = "<group>"; };
+		CEB7590B1887F36400F07D28 /* SDListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDListTableViewController.h; sourceTree = "<group>"; };
+		CEB7590C1887F36500F07D28 /* SDListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDListTableViewController.m; sourceTree = "<group>"; };
+		CEB7590E1887F37300F07D28 /* SDAddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAddTableViewController.h; sourceTree = "<group>"; };
+		CEB7590F1887F37300F07D28 /* SDAddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAddTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +152,7 @@
 		CE8967F5188641EA000A5663 /* SecuryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CEB759071887F34300F07D28 /* ViewControllers */,
 				CE89682D18866190000A5663 /* CustomCocoas */,
 				CE8968291886426F000A5663 /* Resources */,
 				CE89682818864263000A5663 /* Libraries */,
@@ -187,6 +207,8 @@
 				CE89682B188643F9000A5663 /* SDKeychainWrapper.m */,
 				CEB758FB1887B5FB00F07D28 /* SDAppKeychain.h */,
 				CEB758FC1887B5FB00F07D28 /* SDAppKeychain.m */,
+				CEB758FE1887D9B700F07D28 /* SDItemStored.h */,
+				CEB758FF1887D9B700F07D28 /* SDItemStored.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -201,6 +223,8 @@
 		CE8968291886426F000A5663 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEB588D9188902A7007919F3 /* boom.jpg */,
+				CEB759011887E9DC00F07D28 /* funny.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -212,6 +236,21 @@
 				CE896832188661C8000A5663 /* NSString+md5.m */,
 			);
 			path = CustomCocoas;
+			sourceTree = "<group>";
+		};
+		CEB759071887F34300F07D28 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7590B1887F36400F07D28 /* SDListTableViewController.h */,
+				CEB7590C1887F36500F07D28 /* SDListTableViewController.m */,
+				CEB7590E1887F37300F07D28 /* SDAddTableViewController.h */,
+				CEB7590F1887F37300F07D28 /* SDAddTableViewController.m */,
+				CEB588D31888D83A007919F3 /* SDListTableViewCell.h */,
+				CEB588D41888D83A007919F3 /* SDListTableViewCell.m */,
+				CEB588D61888EE04007919F3 /* SDDetailViewController.h */,
+				CEB588D71888EE04007919F3 /* SDDetailViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +332,8 @@
 			files = (
 				CE896808188641EA000A5663 /* Images.xcassets in Resources */,
 				CE8967FA188641EA000A5663 /* InfoPlist.strings in Resources */,
+				CEB759021887E9DC00F07D28 /* funny.jpg in Resources */,
+				CEB588DA188902A7007919F3 /* boom.jpg in Resources */,
 				CE896803188641EA000A5663 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB759001887D9B700F07D28 /* SDItemStored.m in Sources */,
 				CE896833188661C8000A5663 /* NSString+md5.m in Sources */,
 				CE8967FC188641EA000A5663 /* main.m in Sources */,
+				CEB759101887F37300F07D28 /* SDAddTableViewController.m in Sources */,
+				CEB7590D1887F36500F07D28 /* SDListTableViewController.m in Sources */,
+				CEB588D51888D83A007919F3 /* SDListTableViewCell.m in Sources */,
 				CE89682718864220000A5663 /* SDSecuryManager.m in Sources */,
+				CEB588D81888EE04007919F3 /* SDDetailViewController.m in Sources */,
 				CE89682C188643F9000A5663 /* SDKeychainWrapper.m in Sources */,
 				CEB758FD1887B5FB00F07D28 /* SDAppKeychain.m in Sources */,
 				CE896806188641EA000A5663 /* SDViewController.m in Sources */,

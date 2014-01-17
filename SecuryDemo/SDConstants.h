@@ -24,6 +24,10 @@
 #define kSecuryManager [SDSecuryManaged sharedInstance]
 #define kKeychainWrapper [SDKeychainWrapper sharedInstance]
 
+#define kTextKey    @"text"
+#define kImageKey   @"imageName"
+#define kSecuryKey  @"secury"
+
 
 typedef enum {
     kAlertTypePIN = 0,
