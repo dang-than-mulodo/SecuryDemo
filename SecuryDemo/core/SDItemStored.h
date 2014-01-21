@@ -24,6 +24,8 @@
 // Writes JSON file to disk, using Data Protection API
 - (void) saveJSONDataToDict;
 
+- (void) saveJSONDataToDictNotProtected;
+
 // Should someone delete an item, we can remove it directly, then save the new list to disk (saveJSONDataToDict)
 - (void) removeItemAtIndexPath:(NSIndexPath *) indexPath;
 

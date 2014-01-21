@@ -38,7 +38,8 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     lblDetail.text = self.txtDetail;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     
     NSString *imgPath = [documentDirectory stringByAppendingPathComponent:self.imgName];

@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (md5)
+@interface NSString (md5) {
+    
+}
 
 - (NSString *) md5;
+
+@property (nonatomic, readonly, getter = isNumeric) BOOL numeric;
+@property (nonatomic, copy) NSString *tag;
+
 
 @end

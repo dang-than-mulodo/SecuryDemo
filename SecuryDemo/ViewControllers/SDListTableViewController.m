@@ -54,16 +54,16 @@
 
 //Device will become locked
 - (void) deviceWillLock:(id) sender {
-    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
+//    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
 }
 
 //Device is unlock
 - (void) deviceWillUnLock:(id) sender {
-    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
+//    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
 }
 
 - (void)checkFile {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *jsonPath = [documentDirectory stringByAppendingPathComponent:@"items.json"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:jsonPath]) {

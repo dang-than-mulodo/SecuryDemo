@@ -26,7 +26,8 @@
 }
 
 - (NSMutableArray *)dataFromJSONFile:(NSString *)fileName {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *jsonPath = [documentDirectory stringByAppendingPathComponent:fileName];
     
@@ -42,7 +43,7 @@
 }
 
 - (void) writeDefaultImageToDocuments {
-    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [path objectAtIndex:0];
     NSString *imagePath = [documentDirectory stringByAppendingPathComponent:@"default_image.png"];
     //if it's does not, save it
@@ -60,7 +61,7 @@
     
     NSDictionary *jSonDictData = [NSDictionary dictionaryWithObject:self.items forKey:kSecuryKey];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jSonDictData options:NSJSONWritingPrettyPrinted error:&err];
-    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [path objectAtIndex:0];
     NSString *jsonPath = [documentDirectory  stringByAppendingPathComponent:@"items.json"];
     [jsonData writeToFile:jsonPath options:NSDataWritingFileProtectionComplete error:&err];
@@ -68,9 +69,22 @@
     [[NSFileManager defaultManager]  setAttributes:[NSDictionary dictionaryWithObject:NSFileProtectionComplete forKey:NSFileProtectionKey] ofItemAtPath:jsonPath error:&err];
 }
 
+- (void) saveJSONDataToDictNotProtected {
+    NSError *err = nil;
+    NSDictionary *jsonDict = [NSDictionary dictionaryWithObject:self.items forKey:kSecuryKey];
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:kNilOptions error:&err];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *jsonPath = [documentDirectory stringByAppendingPathComponent:@"items.json"];
+    [jsonData writeToFile:jsonPath options:kNilOptions error:&err];
+
+}
+
 - (void)addAnItemToItemsList:(NSDictionary *)newItem {
     [self.items addObject:newItem];
     [self saveJSONDataToDict];
+//    [self saveJSONDataToDictNotProtected];
 }
 
 - (void)removeItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,7 +94,7 @@
 }
 
 - (void) deleteImageWithName:(NSString *)imgName {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *itemPath = [documentDirectory stringByAppendingPathComponent:imgName];
     
@@ -99,7 +113,7 @@
 }
 
 - (UIImage *)imageForPresentAtIndex:(NSIndexPath *)indexPath {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *imgName = [[self.items objectAtIndex:indexPath.row]  objectForKey:kImageKey];
     NSString *imgPath = [documentDirectory stringByAppendingPathComponent:imgName];

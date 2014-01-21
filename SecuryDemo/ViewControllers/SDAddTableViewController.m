@@ -75,7 +75,8 @@
     [self.imgAdd setImage:img];
     
     //capture the file name
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSError *err = nil;
     NSArray *dirContain = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentDirectory error:&err];
