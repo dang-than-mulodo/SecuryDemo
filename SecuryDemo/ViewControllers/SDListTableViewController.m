@@ -54,12 +54,12 @@
 
 //Device will become locked
 - (void) deviceWillLock:(id) sender {
-//    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
+    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
 }
 
 //Device is unlock
 - (void) deviceWillUnLock:(id) sender {
-//    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
+    [self performSelector:@selector(checkFile) withObject:nil afterDelay:10];
 }
 
 - (void)checkFile {

@@ -80,7 +80,7 @@
     NSString *documentDirectory = [paths objectAtIndex:0];
     NSError *err = nil;
     NSArray *dirContain = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentDirectory error:&err];
-    NSString *fileName = [[NSString alloc] initWithFormat:@"photo_%i", [dirContain count]];
+    NSString *fileName = [[NSString alloc] initWithFormat:@"photo_%i.png", [dirContain count]];
     NSString *imgPath = [documentDirectory stringByAppendingPathComponent:fileName];
     
     self.imgName = [NSString stringWithFormat:@"%@", fileName];
