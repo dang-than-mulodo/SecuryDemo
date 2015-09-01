@@ -20,7 +20,7 @@ There are two things about this demo:
      + If you open saveJSONDataToDict, file items.json will be ono access.
      + if you open saveJSONDataToDictNotProtected, file items.json will be access successfully.
      
-     Any issue, please feedback to dang.than@mulodo.com
+     Any issue, please feedback to dtthan.infotrans@gmail.com
      
      Regards, 
      
